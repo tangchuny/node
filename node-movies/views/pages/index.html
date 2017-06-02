@@ -1,0 +1,15 @@
+<% include ../includes/header.html %>
+  <main class="good-list" id="masonry" style="padding-bottom: 5rem;">
+  <% for(var i=0; i<movies.length; i++){%>
+    <section class="good-item">
+      <div class="wrap">
+        <a class="good-img" href="<%= movies[i].poster %>"><img src="<%= movies[i].imgSrc %>" alt="商品图片"></a>
+        <h4 class="good-name ellipsis-2"><%= movies[i].title %></h4>
+        <p class="good-price">评分：
+          <%= movies[i].score %>
+        </p>
+      </div>
+    </section>
+<%}%>
+  </main>
+<% include ../includes/footer.html %>
